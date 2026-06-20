@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronPulse Gym — V1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    #t{display:none;}
+    #sb{position:fixed;top:0;left:-260px;width:260px;height:100vh;background:#b71c1c;transition:0.3s;padding-top:60px;z-index:999;}
+    #sb a{display:block;padding:14px 24px;color:#ffcdd2;text-decoration:none;}
+    #sb a:hover{background:#c62828;}
+    #t:checked~#sb{left:0;}
+    #mc{transition:margin-left 0.3s;}
+    #t:checked~#mc{margin-left:260px;}
+    .lb{position:fixed;top:15px;left:15px;z-index:1000;font-size:26px;cursor:pointer;background:#fff;padding:4px 10px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    .hero{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200');background-size:cover;padding:100px 0;text-align:center;color:#fff;}
+    .card-img-top{height:200px;object-fit:cover;}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="t">
+  <label for="t" class="lb"><i class="bi bi-list"></i></label>
+  <div id="sb">
+    <a href="#"><i class="bi bi-house"></i> Home</a>
+    <a href="#classes"><i class="bi bi-activity"></i> Classes</a>
+    <a href="#trainers"><i class="bi bi-people"></i> Trainers</a>
+    <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+  <div id="mc">
+    <div class="hero">
+      <h1 class="display-4 fw-bold">IronPulse Gym</h1>
+      <p class="lead">Unleash your potential</p>
+    </div>
+    <div class="container py-5" id="classes">
+      <h2 class="mb-4 text-center">Training Programs</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400" class="card-img-top" alt="Weights">
+            <div class="card-body">
+              <h5 class="card-title">Strength Training</h5>
+              <p class="card-text text-muted">Build muscle with guided weight programs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400" class="card-img-top" alt="Yoga">
+            <div class="card-body">
+              <h5 class="card-title">Power Yoga</h5>
+              <p class="card-text text-muted">Flexibility and core strength sessions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?w=400" class="card-img-top" alt="Cardio">
+            <div class="card-body">
+              <h5 class="card-title">HIIT Cardio</h5>
+              <p class="card-text text-muted">High intensity interval training for endurance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4 text-center">Join Now</h2>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone"></div>
+              <div class="col-md-6"><input type="number" class="form-control" placeholder="Age"></div>
+              <div class="col-md-6">
+                <select class="form-select">
+                  <option selected>Membership Type</option>
+                  <option>Monthly</option>
+                  <option>Quarterly</option>
+                  <option>Annual</option>
+                  <option>Personal Training</option>
+                </select>
+              </div>
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Preferred Time"></div>
+              <div class="col-12"><textarea class="form-control" rows="3" placeholder="Fitness Goals"></textarea></div>
+              <div class="col-12 text-center"><button type="submit" class="btn btn-danger px-5">Get Started</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-0">&copy; 2026 IronPulse Gym. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
