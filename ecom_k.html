@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeWear — V2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    #t{display:none;}
+    #sb{position:fixed;top:0;left:-260px;width:260px;height:100vh;background:#111;transition:0.3s;padding-top:60px;z-index:999;border-right:1px solid #333;}
+    #sb a{display:block;padding:14px 24px;color:#aaa;text-decoration:none;}
+    #sb a:hover{background:#222;color:#fff;}
+    #t:checked~#sb{left:0;}
+    #mc{transition:margin-left 0.3s;background:#0a0a0a;color:#eee;}
+    #t:checked~#mc{margin-left:260px;}
+    .lb{position:fixed;top:15px;left:15px;z-index:1000;font-size:26px;cursor:pointer;background:#fff;color:#111;padding:4px 10px;border-radius:4px;}
+    .hero{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200');background-size:cover;padding:100px 0;text-align:center;color:#fff;}
+    .card-img-top{height:260px;object-fit:cover;}
+    .card{background:#161616;border:1px solid #333;color:#eee;}
+    .form-control{background:#222;color:#eee;border:1px solid #444;}
+    .form-control::placeholder{color:#888;}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="t">
+  <label for="t" class="lb"><i class="bi bi-list"></i></label>
+  <div id="sb">
+    <a href="#"><i class="bi bi-house"></i> Home</a>
+    <a href="#shop"><i class="bi bi-bag"></i> Collection</a>
+    <a href="#lookbook"><i class="bi bi-camera"></i> Lookbook</a>
+    <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+  <div id="mc">
+    <div class="hero">
+      <h1 class="display-4 fw-bold">LuxeWear Noir</h1>
+      <p class="lead">Where darkness meets haute couture</p>
+    </div>
+    <div class="container py-5" id="shop">
+      <h2 class="mb-4 text-center">The Collection</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1550614000-4b9519e02a48?w=400" class="card-img-top" alt="Coat">
+            <div class="card-body text-center">
+              <h6 class="card-title">Wool Overcoat</h6>
+              <p class="card-text fw-bold text-white">$349</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400" class="card-img-top" alt="Bag">
+            <div class="card-body text-center">
+              <h6 class="card-title">Designer Clutch</h6>
+              <p class="card-text fw-bold text-white">$199</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400" class="card-img-top" alt="Watch">
+            <div class="card-body text-center">
+              <h6 class="card-title">Minimal Watch</h6>
+              <p class="card-text fw-bold text-white">$249</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400" class="card-img-top" alt="Shoes">
+            <div class="card-body text-center">
+              <h6 class="card-title">Oxford Shoes</h6>
+              <p class="card-text fw-bold text-white">$179</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4 text-center">Concierge</h2>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone"></div>
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Order Reference"></div>
+              <div class="col-12"><textarea class="form-control" rows="4" placeholder="How may we assist?" required></textarea></div>
+              <div class="col-12 text-center"><button type="submit" class="btn btn-light px-5">Submit</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center py-4" style="border-top:1px solid #333;">
+      <p class="mb-0 text-muted">&copy; 2026 LuxeWear Noir. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
