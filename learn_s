@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub — V1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    #t{display:none;}
+    #sb{position:fixed;top:0;left:-260px;width:260px;height:100vh;background:#1565c0;transition:0.3s;padding-top:60px;z-index:999;}
+    #sb a{display:block;padding:14px 24px;color:#bbdefb;text-decoration:none;}
+    #sb a:hover{background:#1976d2;}
+    #t:checked~#sb{left:0;}
+    #mc{transition:margin-left 0.3s;}
+    #t:checked~#mc{margin-left:260px;}
+    .lb{position:fixed;top:15px;left:15px;z-index:1000;font-size:26px;cursor:pointer;background:#fff;padding:4px 10px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    .hero{background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200');background-size:cover;padding:100px 0;text-align:center;color:#fff;}
+    .card-img-top{height:180px;object-fit:cover;}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="t">
+  <label for="t" class="lb"><i class="bi bi-list"></i></label>
+  <div id="sb">
+    <a href="#"><i class="bi bi-house"></i> Home</a>
+    <a href="#courses"><i class="bi bi-book"></i> Courses</a>
+    <a href="#mentors"><i class="bi bi-people"></i> Mentors</a>
+    <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+  <div id="mc">
+    <div class="hero">
+      <h1 class="display-4 fw-bold">LearnHub</h1>
+      <p class="lead">Learn anything, anywhere, anytime</p>
+    </div>
+    <div class="container py-5" id="courses">
+      <h2 class="mb-4 text-center">Popular Courses</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400" class="card-img-top" alt="Web Dev">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text text-muted">HTML, CSS, JS and modern frameworks from scratch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" class="card-img-top" alt="Data">
+            <div class="card-body">
+              <h5 class="card-title">Data Science</h5>
+              <p class="card-text text-muted">Python, statistics, and machine learning basics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400" class="card-img-top" alt="Design">
+            <div class="card-body">
+              <h5 class="card-title">UI/UX Design</h5>
+              <p class="card-text text-muted">Design thinking, Figma, and user research.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4 text-center">Enquiry / Support</h2>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Name" required></div>
+              <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone"></div>
+              <div class="col-md-6">
+                <select class="form-select">
+                  <option selected>I am a...</option>
+                  <option>Student</option>
+                  <option>Parent</option>
+                  <option>Educator</option>
+                  <option>Enterprise</option>
+                </select>
+              </div>
+              <div class="col-12"><input type="text" class="form-control" placeholder="Subject"></div>
+              <div class="col-12"><textarea class="form-control" rows="4" placeholder="How can we help?" required></textarea></div>
+              <div class="col-12 text-center"><button type="submit" class="btn btn-primary px-5">Submit</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-0">&copy; 2026 LearnHub. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
