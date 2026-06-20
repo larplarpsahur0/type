@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityCare Hospital — V2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    #t{display:none;}
+    #sb{position:fixed;top:0;left:-260px;width:260px;height:100vh;background:#e0f2f1;transition:0.3s;padding-top:60px;z-index:999;border-right:1px solid #b2dfdb;}
+    #sb a{display:block;padding:14px 24px;color:#00695c;text-decoration:none;}
+    #sb a:hover{background:#b2dfdb;}
+    #t:checked~#sb{left:0;}
+    #mc{transition:margin-left 0.3s;}
+    #t:checked~#mc{margin-left:260px;}
+    .lb{position:fixed;top:15px;left:15px;z-index:1000;font-size:26px;cursor:pointer;background:#009688;color:#fff;padding:4px 10px;border-radius:4px;}
+    .hero{background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200');background-size:cover;padding:100px 0;text-align:center;color:#fff;}
+    .card-img-top{height:200px;object-fit:cover;}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="t">
+  <label for="t" class="lb"><i class="bi bi-list"></i></label>
+  <div id="sb">
+    <a href="#"><i class="bi bi-house"></i> Home</a>
+    <a href="#services"><i class="bi bi-heart-pulse"></i> Services</a>
+    <a href="#facilities"><i class="bi bi-building"></i> Facilities</a>
+    <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+  <div id="mc">
+    <div class="hero">
+      <h1 class="display-4 fw-bold">CityCare Hospital</h1>
+      <p class="lead">Your wellness, our mission</p>
+    </div>
+    <div class="container py-5" id="services">
+      <h2 class="mb-4 text-center">Medical Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400" class="card-img-top" alt="Surgery">
+            <div class="card-body">
+              <h5 class="card-title">General Surgery</h5>
+              <p class="card-text text-muted">Laparoscopic and minimally invasive procedures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=400" class="card-img-top" alt="Emergency">
+            <div class="card-body">
+              <h5 class="card-title">24/7 Emergency</h5>
+              <p class="card-text text-muted">Round-the-clock trauma and critical care.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400" class="card-img-top" alt="Lab">
+            <div class="card-body">
+              <h5 class="card-title">Diagnostic Lab</h5>
+              <p class="card-text text-muted">Accurate pathology and imaging services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4 text-center">Patient Inquiry</h2>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control" placeholder="Phone"></div>
+              <div class="col-md-6"><input type="date" class="form-control"></div>
+              <div class="col-md-6">
+                <select class="form-select">
+                  <option selected>Select Service</option>
+                  <option>General Checkup</option>
+                  <option>Specialist Consult</option>
+                  <option>Lab Test</option>
+                  <option>Surgery Inquiry</option>
+                </select>
+              </div>
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Insurance ID"></div>
+              <div class="col-12"><textarea class="form-control" rows="3" placeholder="Medical concern"></textarea></div>
+              <div class="col-12 text-center"><button type="submit" class="btn btn-success px-5">Submit</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-0">&copy; 2026 CityCare Hospital. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
